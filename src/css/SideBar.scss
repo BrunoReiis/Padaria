@@ -1,0 +1,25 @@
+#sidebar {
+  // border: solid 1px crimson;
+  width: 15vw;
+  height: 90vh;
+  background-color: var(--2);
+  padding: 20px 30px;
+
+  #sidebar_list {
+    .sidebar_list_element {
+      list-style: none;
+      line-height: 3rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.2rem;
+      transition: all 0.3s ease;
+      width: fit-content;
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .sidebar_list_element:hover {
+      transform: scale(1.1);
+    }
+  }
+}

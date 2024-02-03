@@ -3,6 +3,11 @@
 :root {
   --Text: #4c4f69;
   --Base: #eff1f5;
+  --base1: #fee3d2;
+  --Base: #df9f73;
+  --Text: #854134;
+  --1: #ffccc8;
+  --2: #fceee4;
 }
 
 * {
@@ -14,4 +19,8 @@
   color: var(--Text);
   font-weight: 600;
   letter-spacing: 0.05rem;
+}
+
+body {
+  background-color: #faf9f6;
 }

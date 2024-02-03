@@ -4,16 +4,33 @@ export default function NavBar() {
       <nav id="navbar">
         <a id="header_profile_picture" href="/index.html">
           <img
-            src="/vite.svg"
+            src="/logo.png"
             alt="Logo Website"
             id="profile_picture_image"
           ></img>
-          <p id="profile_picture_text">Logo</p>
+          <p id="profile_picture_text">Padaria Pão Feliz</p>
         </a>
         <ul className="header_user_menu">
-          <a href="">Usuário</a>
-          <a href="">Usuário</a>
-          <a href="">Usuário</a>
+          <a href="">
+            Produtos
+            <span />
+          </a>
+          <a href="">
+            Contato
+            <span />
+          </a>
+          <a href="">
+            Sobre
+            <span />
+          </a>
+          {/* <div> */}
+          <a href="">
+            <i className="fa-solid fa-basket-shopping"></i>
+          </a>
+          <a href="">
+            <i className="fa-solid fa-user-large"></i>
+          </a>
+          {/* </div> */}
         </ul>
         <div className="header_hamburger">
           <span className="bar"></span>

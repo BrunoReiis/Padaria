@@ -1,7 +1,20 @@
 import NavBar from "./components/NavBar";
+import ProductRow from "./components/ProductRow";
+import SideBar from "./components/SideBar";
 
 function App() {
-  return <NavBar />;
+  // #page_content e #products no "main.scss"
+  return (
+    <>
+      <NavBar />
+      <div id="page_content">
+        <SideBar />
+        <div id="products">
+          <ProductRow />
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default App;

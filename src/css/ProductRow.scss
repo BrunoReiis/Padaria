@@ -1,0 +1,12 @@
+.product-row {
+  // border: solid 1px crimson;
+
+  width: 85vw;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
