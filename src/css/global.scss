@@ -3,21 +3,6 @@
 :root {
   --Text: #4c4f69;
   --Base: #eff1f5;
-
-  --filter: invert(30%) sepia(10%) saturate(1262%) hue-rotate(196deg)
-    brightness(96%) contrast(90%);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --Text: #c6d0f5;
-    --Base: #303446;
-    --Base1: #292c3c;
-    --Base2: #232634;
-
-    --filter: invert(74%) sepia(4%) saturate(1810%) hue-rotate(192deg)
-      brightness(114%) contrast(92%);
-  }
 }
 
 * {
