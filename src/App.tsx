@@ -11,6 +11,7 @@ function App() {
         <SideBar />
         <div id="products">
           <ProductRow />
+          <ProductRow />
         </div>
       </div>
     </>
