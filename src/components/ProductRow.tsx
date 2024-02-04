@@ -2,7 +2,7 @@ import Card from "./Card";
 
 interface Props {
   title: string;
-  content: string[];
+  content: string[][];
 }
 const ProductRow = ({ title, content }: Props) => {
   // const paes = [
