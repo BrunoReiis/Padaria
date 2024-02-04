@@ -2,8 +2,10 @@
   // border: solid 1px crimson;
   width: 15vw;
   height: 90vh;
-  background-color: var(--2);
+  // background-color: var(--2);
   padding: 20px 30px;
+  position: sticky;
+  top: 10vh;
 
   #sidebar_list {
     .sidebar_list_element {
@@ -17,9 +19,32 @@
         text-decoration: none;
         cursor: pointer;
       }
+      a > span {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        border-bottom: solid 2px var(--Text);
+        transition: all 0.3s ease;
+      }
+      a > i {
+        font-size: 2rem;
+      }
+      a:hover {
+        cursor: pointer;
+        span {
+          left: 0;
+          width: 100%;
+        }
+      }
     }
     .sidebar_list_element:hover {
-      transform: scale(1.1);
+      transform: scale(1);
     }
+  }
+}
+@media (max-width: 900px) {
+  .sidebar_list_element {
+    transition: none;
   }
 }

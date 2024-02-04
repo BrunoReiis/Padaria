@@ -61,7 +61,6 @@ export default function ProductRow() {
             const controls = row.querySelectorAll('.control')
             let currentItem = checksIfItemsAreVisible(row)
 
-
             controls.forEach(control => {
                 control.addEventListener('click', () => {
 
@@ -83,10 +82,9 @@ export default function ProductRow() {
 
                     cards[currentItem].scrollIntoView({
                         inline: "center",
+                        block: "center",
                         behavior: "smooth",
                     })
-                    cards[currentItem].classList.add('current-item')
-
                 })
             })
         })

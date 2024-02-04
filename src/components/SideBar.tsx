@@ -4,19 +4,34 @@ const SideBar = () => {
       <section id="sidebar">
         <ul id="sidebar_list">
           <li className="sidebar_list_element">
-            <a href="">Paes</a>
+            <a href="#Pães">
+              Pães
+              <span />
+            </a>
           </li>
           <li className="sidebar_list_element">
-            <a href="">Bebidas</a>
+            <a href="#Bebidas">
+              Bebidas
+              <span />
+            </a>
           </li>
           <li className="sidebar_list_element">
-            <a href="">Doces</a>
+            <a href="#Doces">
+              Doces
+              <span />
+            </a>
           </li>
           <li className="sidebar_list_element">
-            <a href="">Bolos</a>
+            <a href="#Bolos">
+              Bolos
+              <span />
+            </a>
           </li>
           <li className="sidebar_list_element">
-            <a href="">Pizzas</a>
+            <a href="#Pizzas">
+              Pizzas
+              <span />
+            </a>
           </li>
         </ul>
       </section>
