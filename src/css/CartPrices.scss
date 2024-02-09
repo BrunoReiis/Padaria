@@ -1,9 +1,17 @@
 #cart_prices {
-  border: solid 1px crimson;
   width: 25vw;
-  height: calc(100svh - 10vh);
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  button {
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    color: #faf9f6;
+    background-color: var(--Text);
+    font-size: 2rem;
+  }
 }

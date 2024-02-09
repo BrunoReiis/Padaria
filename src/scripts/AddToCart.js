@@ -6,10 +6,16 @@ export default function AddToCart() {
             e.preventDefault()
 
             let parentElement = e.currentTarget.parentNode.parentNode
+            let img = e.currentTarget.parentNode.querySelector("img").src.split("/img")[1]
+            let itemPrice = parentElement.querySelector(".product_price").textContent.replace(",", ".")
             let itemName = parentElement.querySelector(".product_name").textContent
-            let itemPrice = parentElement.querySelector(".product_price").textContent
-            console.log(itemName);
-            console.log(itemPrice);
+
+            try {
+                let itemInfo = parentElement.querySelector(".product_info").textContent
+                sessionStorage.setItem(itemName, [itemPrice, `/img${img}`, itemName, itemInfo, 1])
+            } catch (e) {
+                sessionStorage.setItem(itemName, [itemPrice, `/img${img}`, itemName, 1])
+            }
         })
     })
 }
