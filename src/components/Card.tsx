@@ -1,10 +1,11 @@
 interface Props {
   img: string;
   title: string;
-  buttonText: string;
+  info?: string;
+  price: string;
 }
 
-const Card = ({ img, title, buttonText }: Props) => {
+const Card = ({ img, title, info, price }: Props) => {
   return (
     <div className="card">
       <div className="image_content">
@@ -13,10 +14,18 @@ const Card = ({ img, title, buttonText }: Props) => {
           <i className="fa-solid fa-plus"></i>
         </button>
       </div>
-      <div className="card_content">
-        <h1>{title}</h1>
-        <button>{buttonText}</button>
-      </div>
+      {info ? (
+        <div className="card_content">
+          <p className="product_price">{price}</p>
+          <h1 className="product_name">{title}</h1>
+          <p className="product_info">{info}</p>
+        </div>
+      ) : (
+        <div className="card_content_no_info">
+          <p className="product_price">{price}</p>
+          <h1 className="product_name">{title}</h1>
+        </div>
+      )}
     </div>
   );
 };

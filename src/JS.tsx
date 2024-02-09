@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import NavBar from "./scripts/NavBar.js";
-// import ProductRow from "./scripts/ProductRow.js";
+import AddToCart from "./scripts/AddToCart.js";
 
 function JS() {
   useEffect(() => {
-    // ProductRow();
+    AddToCart();
     NavBar();
   }, []);
   return null;

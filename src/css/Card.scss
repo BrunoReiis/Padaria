@@ -1,9 +1,7 @@
 .card {
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
   border: solid 2px transparent;
 
-  width: 300px;
+  width: 150px;
   height: 300px;
 
   display: flex;
@@ -14,15 +12,15 @@
   transition: all 0.3s ease;
 
   .image_content {
-    aspect-ratio: 2 / 1;
-    width: 300px;
-    border-top-right-radius: 30px;
+    width: 150px;
+    height: 150px;
     position: relative;
 
+    display: flex;
+    justify-content: center;
     img {
-      border-top-right-radius: 30px;
-      aspect-ratio: 2 / 1;
-      width: 300px;
+      aspect-ratio: 1 / 1;
+      width: 146px;
       object-fit: cover;
     }
 
@@ -35,7 +33,7 @@
       right: 1rem;
 
       aspect-ratio: 1 / 1;
-      width: 50px;
+      width: 40px;
       border-radius: 50%;
 
       background-color: #faf9f6;
@@ -47,7 +45,7 @@
       transition: all 0.3s ease;
 
       i {
-        font-size: 2rem;
+        font-size: 1.5rem;
         transition: all 0.3s ease;
       }
     }
@@ -60,36 +58,54 @@
   }
 
   .card_content {
-    aspect-ratio: 2 / 1;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-    align-items: center;
-    gap: 0.5rem;
+    aspect-ratio: 1 / 1;
+    width: 150px;
+    padding: 10px;
+    position: relative;
 
-    h1,
-    p {
+    .product_name,
+    .product_info,
+    .product_price {
       line-break: normal;
-      text-align: center;
     }
-
-    h1 {
-      font-size: 1.3rem;
-    }
-
-    p {
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    button {
-      all: unset;
-      padding: 10px 20px;
+    .product_price {
+      font-weight: 600;
       border-radius: 15px;
-      cursor: pointer;
       color: #348541;
+    }
+
+    .product_name {
+      font-size: 0.875rem;
+      margin-top: 1rem;
+    }
+
+    .product_info {
+      font-size: 0.7rem;
+      color: #717171;
+      opacity: 0.8;
+      position: absolute;
+      top: auto;
+      bottom: 10px;
+    }
+  }
+  .card_content_no_info {
+    aspect-ratio: 1 / 1;
+    width: 150px;
+    padding: 10px;
+
+    .product_name,
+    .product_price {
+      line-break: normal;
+    }
+    .product_price {
+      font-weight: 600;
+      border-radius: 15px;
+      color: #348541;
+    }
+
+    .product_name {
+      margin-top: 1rem;
+      font-size: 0.875rem;
     }
   }
 }

@@ -42,7 +42,6 @@ export default function ProductRow() {
             if (needsControls) { addsControlButtons(row) }
         })
     }
-    controlButtonsNeeded()
 
     function checksIfItemsAreVisible(row) {
         let invisibles = []
@@ -91,7 +90,8 @@ export default function ProductRow() {
     }
     const rows = document.querySelectorAll(".product_row")
 
+    controlButtonsNeeded()
     controls(rows)
-
-
 }
+
+// https://www.youtube.com/watch?v=SVO3tNH5fTo

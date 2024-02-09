@@ -2,60 +2,20 @@
   width: 85vw;
   padding: 2rem;
   position: relative;
-  // border: solid 1px crimson;
+  transform: translateY(-10vh);
 
   > h1 {
-    // border: solid 1px crimson;
     padding: 1rem 2rem;
-    margin-top: 0;
   }
   .product_row_carousel {
-    // border: solid 1px crimson;
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     padding: 0 1rem;
-
-    // overflow-y: auto;
-    // -ms-overflow-style: none;
-    // scrollbar-width: none;
-
-    // overflow-y: hidden;
   }
-
-  // .arrow_left,
-  // .arrow_right {
-  //   all: unset;
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 1rem;
-
-  //   font-size: 2rem;
-
-  //   width: 60px;
-  //   height: 60px;
-  //   border-radius: 50%;
-  //   background: var(--Base);
-
-  //   cursor: pointer;
-  //   transition: all 0.3s ease;
-  //   z-index: 3;
-
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
-  // .arrow_left:hover,
-  // .arrow_right:hover {
-  //   background: var(--Text);
-  //   i {
-  //     color: var(--Base);
-  //   }
-  // }
-
-  // .arrow_right {
-  //   left: auto;
-  //   right: 1rem;
-  // }
+}
+.product_row:nth-child(1) {
+  h1:nth-child(1) {
+    margin-top: 10vh;
+  }
 }
