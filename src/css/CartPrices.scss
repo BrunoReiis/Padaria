@@ -1,0 +1,9 @@
+#cart_prices {
+  border: solid 1px crimson;
+  width: 25vw;
+  height: calc(100svh - 10vh);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

@@ -1,0 +1,36 @@
+.cart_card {
+  display: flex;
+  padding: 10px;
+  border: solid 2px var(--Text);
+  border-radius: 1rem;
+  gap: 1rem;
+
+  img {
+    border-radius: 0.5rem;
+    aspect-ratio: 1.5 / 1;
+    height: 150px;
+    object-fit: cover;
+  }
+  .cart_card_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .card_title {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+    .container {
+      .card_description {
+        font-size: 0.875rem;
+        color: #717171;
+        opacity: 0.8;
+      }
+      .card_price {
+        font-weight: 600;
+        font-size: 1.1rem;
+        border-radius: 15px;
+        color: #348541;
+      }
+    }
+  }
+}

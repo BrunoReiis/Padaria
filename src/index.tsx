@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import App from "./App.tsx";
-import JS from "./JS.tsx";
+import JS from "./JS/index.tsx";
 
 import "./css/global.scss";
 import "./css/main.scss";

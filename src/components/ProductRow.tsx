@@ -4,12 +4,14 @@ interface Props {
   title: string;
   content: string[][];
 }
+
 const ProductRow = ({ title, content }: Props) => {
   return (
     <>
-      <div className="product_row" id={title}>
+      <div className="product_row">
+        <span id={title} />
         <h1>{title}</h1>
-        <div className="product_row_carousel">
+        <div className="product_row_products">
           {content.map((key, index) => {
             if (key.length === 4) {
               return (

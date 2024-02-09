@@ -2,9 +2,9 @@ export default function NavBar() {
   return (
     <header>
       <nav id="navbar">
-        <a id="header_profile_picture" href="/index.html">
+        <a id="header_profile_picture" href="./index.html">
           <img
-            src="/logo.png"
+            src="/img/logo.png"
             alt="Logo Website"
             id="profile_picture_image"
           ></img>
@@ -23,14 +23,12 @@ export default function NavBar() {
             Sobre
             <span />
           </a>
-          {/* <div> */}
-          <a href="">
+          <a href="./cart.html">
             <i className="fa-solid fa-basket-shopping"></i>
           </a>
           <a href="">
             <i className="fa-solid fa-user-large"></i>
           </a>
-          {/* </div> */}
         </ul>
         <div className="header_hamburger">
           <span className="bar"></span>
