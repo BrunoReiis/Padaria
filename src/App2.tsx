@@ -3,7 +3,7 @@ import CartProducts from "./components/CartProducts";
 import CartPrices from "./components/CartPrices";
 
 function App2() {
-  let products = [];
+  let products: string[][];
   Object.keys(sessionStorage).forEach((product) => {
     products.push(sessionStorage.getItem(product).split(","));
   });
