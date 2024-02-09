@@ -23,7 +23,7 @@ export default function NavBar() {
             Sobre
             <span />
           </a>
-          <a href="./cart.html">
+          <a href="./template/cart.html">
             <i className="fa-solid fa-basket-shopping"></i>
           </a>
           <a href="">
