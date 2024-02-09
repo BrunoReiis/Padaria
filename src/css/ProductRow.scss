@@ -19,3 +19,17 @@
     padding: 0 1rem;
   }
 }
+@media (max-width: 900px) {
+  .product_row {
+    width: 100vw;
+    padding: 1rem;
+    .product_row_products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex: 1 1 100px;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+  }
+}

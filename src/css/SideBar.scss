@@ -43,7 +43,7 @@
   }
 }
 @media (max-width: 900px) {
-  .sidebar_list_element {
-    transition: none;
+  #sidebar {
+    display: none;
   }
 }

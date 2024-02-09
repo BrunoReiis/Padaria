@@ -3,24 +3,37 @@ export default function CartActions() {
         const oldValue = sessionStorage.getItem(key)
 
         if (value === "add") {
-            const quantity = parseInt(oldValue[oldValue.length - 1]) + 1
             const newValue = oldValue.split(",")
-            newValue[3] = quantity
-            console.log(newValue);
-
+            let quantity
+            if (newValue.length === 5) {
+                quantity = parseInt(newValue[4]) + 1
+                newValue[4] = quantity
+            } else if (newValue.length === 4) {
+                quantity = parseInt(newValue[3]) + 1
+                newValue[3] = quantity
+            }
             sessionStorage.removeItem(key)
             sessionStorage.setItem(key, newValue)
 
         } else if (value === "remove") {
-            const quantity = parseInt(oldValue[oldValue.length - 1]) - 1
+            const newValue = oldValue.split(",")
+            let quantity
+            if (newValue.length === 5) {
+                quantity = parseInt(newValue[4]) - 1
+            } else if (newValue.length === 4) {
+                quantity = parseInt(newValue[3]) - 1
+            }
+
             if (quantity <= 0) {
                 sessionStorage.removeItem(key)
                 alert(`O item ${key} foi removido da sua sacola de compras.`)
             } else {
                 const newValue = oldValue.split(",")
-                newValue[3] = quantity
-                console.log(newValue);
-
+                if (newValue.length === 5) {
+                    newValue[4] = quantity
+                } else if (newValue.length === 4) {
+                    newValue[3] = quantity
+                }
                 sessionStorage.removeItem(key)
                 sessionStorage.setItem(key, newValue)
             }

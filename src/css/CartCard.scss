@@ -1,7 +1,7 @@
 .cart_card {
   display: flex;
   padding: 10px;
-  border: solid 2px var(--Text);
+  border: solid 2px rgba(223, 159, 115, 0.5);
   border-radius: 1rem;
   gap: 1rem;
   position: relative;
@@ -60,6 +60,51 @@
     > i:hover {
       background-color: var(--Text);
       color: #faf9f6;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .cart_card {
+    flex-direction: column;
+
+    img {
+      border-radius: 0.5rem;
+      height: 125px;
+      object-fit: cover;
+    }
+    .cart_card_buttons {
+      position: relative !important;
+      bottom: unset;
+      right: unset;
+    }
+  }
+}
+@media (max-width: 491px) {
+  .cart_card {
+    gap: 0.5rem;
+    img {
+      height: 100px;
+    }
+    .cart_card_content {
+      .card_title {
+        margin-top: 0;
+        font-size: 1rem;
+      }
+      .container {
+        .card_description {
+          font-size: 0.875rem;
+        }
+        .card_price {
+          font-size: 0.875rem;
+        }
+      }
+    }
+    .cart_card_buttons {
+      > * {
+        font-size: 1rem;
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 }
