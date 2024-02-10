@@ -2,7 +2,7 @@ export default function NavBar() {
   return (
     <header>
       <nav id="navbar">
-        <a id="header_profile_picture" href="./index.html">
+        <a id="header_profile_picture" href="/">
           <img
             src="/img/logo.png"
             alt="Logo Website"
@@ -11,22 +11,22 @@ export default function NavBar() {
           <p id="profile_picture_text">Padaria Pão Feliz</p>
         </a>
         <ul className="header_user_menu">
-          <a href="">
+          <a href="/">
             Produtos
             <span />
           </a>
-          <a href="">
+          <a href="/contact">
             Contato
             <span />
           </a>
-          <a href="">
+          <a href="/about">
             Sobre
             <span />
           </a>
-          <a href="../template/cart.html">
+          <a href="/cart">
             <i className="fa-solid fa-basket-shopping"></i>
           </a>
-          <a href="">
+          <a href="/user">
             <i className="fa-solid fa-user-large"></i>
           </a>
         </ul>

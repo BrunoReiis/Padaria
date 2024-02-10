@@ -1,4 +1,4 @@
-export default function NavBar() {
+export default function NavBarJS() {
     const user_menu = document.querySelector(".header_user_menu");
     const hamburger = document.querySelector(".header_hamburger");
 
