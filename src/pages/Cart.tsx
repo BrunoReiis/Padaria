@@ -1,5 +1,5 @@
-import CartProducts from "../components/CartProducts";
-import CartPrices from "../components/CartPrices";
+import Cart_Products from "../components/Cart/Products";
+import Cart_Prices from "../components/Cart/Prices";
 
 import { useEffect } from "react";
 import CartActions from "../scripts/CartActions";
@@ -24,8 +24,8 @@ function Cart() {
   return (
     <>
       <div id="page_content">
-        <CartProducts content={products} />
-        <CartPrices />
+        <Cart_Products content={products} />
+        <Cart_Prices />
       </div>
     </>
   );

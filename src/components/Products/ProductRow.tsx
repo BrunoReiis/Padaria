@@ -5,7 +5,7 @@ interface Props {
   content: string[][];
 }
 
-const ProductRow = ({ title, content }: Props) => {
+const Home_ProductRow = ({ title, content }: Props) => {
   return (
     <>
       <div className="product_row">
@@ -35,4 +35,4 @@ const ProductRow = ({ title, content }: Props) => {
   );
 };
 
-export default ProductRow;
+export default Home_ProductRow;

@@ -5,7 +5,7 @@ interface Props {
   price: string;
 }
 
-const Card = ({ img, title, info, price }: Props) => {
+const Home_Card = ({ img, title, info, price }: Props) => {
   return (
     <div className="card">
       <div className="image_content">
@@ -30,4 +30,4 @@ const Card = ({ img, title, info, price }: Props) => {
   );
 };
 
-export default Card;
+export default Home_Card;

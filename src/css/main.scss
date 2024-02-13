@@ -1,8 +1,12 @@
-#page_content {
-  display: flex;
+::-webkit-scrollbar {
+  width: 15px;
+}
 
-  #products {
-    display: flex;
-    flex-direction: column;
-  }
+::-webkit-scrollbar-track {
+  background: var(--base1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b88472;
+  border-radius: 8px;
 }

@@ -87,7 +87,7 @@ header {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1186px) {
   #header_profile_picture {
     margin: 0 20px !important;
     transition: none !important;
@@ -129,7 +129,7 @@ header {
     transform: translateY(-50%);
     height: -moz-fit-content;
     height: fit-content;
-    margin-right: 1rem;
+    margin-right: 5%;
   }
 
   .header_hamburger.active .bar:nth-child(2) {

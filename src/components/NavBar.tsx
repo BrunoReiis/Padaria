@@ -11,7 +11,7 @@ export default function NavBar() {
           <p id="profile_picture_text">Padaria Pão Feliz</p>
         </a>
         <ul className="header_user_menu">
-          <a href="/">
+          <a href="/products">
             Produtos
             <span />
           </a>

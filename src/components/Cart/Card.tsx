@@ -6,7 +6,7 @@ interface Props {
   quantity: string;
 }
 
-const CartCard = ({ img, title, description, price, quantity }: Props) => {
+const Cart_Card = ({ img, title, description, price, quantity }: Props) => {
   return (
     <div className="cart_card">
       <img src={img} />
@@ -34,4 +34,4 @@ const CartCard = ({ img, title, description, price, quantity }: Props) => {
   );
 };
 
-export default CartCard;
+export default Cart_Card;

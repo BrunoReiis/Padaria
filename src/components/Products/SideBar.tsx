@@ -1,4 +1,4 @@
-const SideBar = () => {
+const Home_SideBar = () => {
   return (
     <>
       <section id="sidebar">
@@ -39,4 +39,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Home_SideBar;

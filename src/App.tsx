@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import NavBar from "../components/NavBar";
-import Home from "./Home";
-import Cart from "./Cart";
-import User from "./User";
-import Contact from "./Contact";
-import About from "./About";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import User from "./pages/User";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />

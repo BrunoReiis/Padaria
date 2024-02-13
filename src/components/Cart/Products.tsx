@@ -1,10 +1,10 @@
-import CartCard from "./CartCard";
+import CartCard from "./Card";
 
 interface Props {
   content: string[][];
 }
 
-const CartProducts = ({ content }: Props) => {
+const Cart_Products = ({ content }: Props) => {
   return (
     <section id="cart_products">
       {content.length > 0 ? (
@@ -39,4 +39,4 @@ const CartProducts = ({ content }: Props) => {
   );
 };
 
-export default CartProducts;
+export default Cart_Products;

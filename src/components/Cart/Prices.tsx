@@ -1,4 +1,4 @@
-const CartPrices = () => {
+const Cart_Prices = () => {
   return (
     <section id="cart_prices">
       <h2 id="cart_subtotal"></h2>
@@ -12,4 +12,4 @@ const CartPrices = () => {
   );
 };
 
-export default CartPrices;
+export default Cart_Prices;
