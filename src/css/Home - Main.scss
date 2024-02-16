@@ -21,7 +21,7 @@
         width: 40%;
       }
 
-      #home_content_container2 {
+      #content_container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -101,7 +101,7 @@
     #home_content {
       #home_content_container {
         width: 90%;
-        #home_content_container2 {
+        #content_container {
           gap: 1rem;
 
           h1 {
@@ -112,6 +112,21 @@
           }
           a {
             font-size: 1.25rem;
+            transition: none !important;
+            i {
+              transition: none !important;
+            }
+          }
+          a:hover {
+            color: var(--Text);
+            i {
+              color: var(--Text);
+            }
+          }
+          a::before {
+            transform: none !important;
+            background-color: transparent;
+            color: var(--Text);
           }
         }
       }
@@ -139,7 +154,7 @@
         align-items: center;
         width: 100%;
 
-        #home_content_container2 {
+        #content_container {
           width: 75%;
           gap: 1rem;
 

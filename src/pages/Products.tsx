@@ -2,12 +2,10 @@ import Home_ProductRow from "../components/Products/ProductRow";
 import Home_SideBar from "../components/Products/SideBar";
 import { useEffect } from "react";
 import AddToCart from "../scripts/AddToCart";
-import NavBarJS from "../scripts/NavBar";
 
 function Products() {
   useEffect(() => {
     AddToCart();
-    NavBarJS();
   }, []);
   const paes = [
     ["R$ 11,60", "/img/mockup-01.avif", "PÃO FRANCÊS PACOTE", "5 Unidades"],

@@ -4,7 +4,7 @@ const Home_Main = () => {
       <section id="home_content">
         <div id="home_content_container">
           <img src="/img/logo.png" />
-          <div id="home_content_container2">
+          <div id="content_container">
             <h1>Padaria Pão Feliz</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus

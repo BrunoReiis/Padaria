@@ -4,11 +4,9 @@ import Cart_Prices from "../components/Cart/Prices";
 import { useEffect } from "react";
 import CartActions from "../scripts/CartActions";
 import CartPrice from "../scripts/CartPrice";
-import NavBarJS from "../scripts/NavBar";
 
 function Cart() {
   useEffect(() => {
-    NavBarJS();
     CartActions();
     CartPrice();
   }, []);

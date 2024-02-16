@@ -1,4 +1,7 @@
 import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import NavBarJS from "./scripts/NavBar";
+
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
@@ -8,6 +11,9 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 
 function App() {
+  useEffect(() => {
+    NavBarJS();
+  }, []);
   return (
     <>
       <NavBar />

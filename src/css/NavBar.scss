@@ -93,8 +93,10 @@ header {
     transition: none !important;
   }
 
-  #header_profile_picture p {
-    display: none !important;
+  #header_profile_picture {
+    p {
+      display: none !important;
+    }
   }
 
   .header_user_menu {
@@ -108,7 +110,11 @@ header {
     z-index: -1;
     padding: 20px;
     opacity: 0;
-    transition: none !important;
+
+    a > span {
+      border-bottom: solid 2px transparent !important;
+      transition: none !important;
+    }
   }
 
   .header_user_menu.active {
@@ -117,9 +123,13 @@ header {
     background-color: var(--base1);
   }
 
-  header .header_user_menu a:hover {
-    background-color: var(--base1);
-    color: var(--Text);
+  header {
+    .header_user_menu {
+      a:hover {
+        background-color: var(--base1);
+        color: var(--Text);
+      }
+    }
   }
 
   .header_hamburger {
@@ -132,16 +142,22 @@ header {
     margin-right: 5%;
   }
 
-  .header_hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+  .header_hamburger.active {
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
   }
 
-  .header_hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+  .header_hamburger.active {
+    .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
   }
 
-  .header_hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  .header_hamburger.active {
+    .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
   }
 }
 
