@@ -1,6 +1,6 @@
 import Home_Main from "../components/Home/main";
 import { useEffect } from "react";
-import AddToCart from "../scripts/AddToCart";
+import AddToCart from "../scripts/ProductsJS";
 
 function Home() {
   useEffect(() => {

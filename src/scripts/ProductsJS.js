@@ -1,4 +1,4 @@
-export default function AddToCart() {
+export default function ProductsJS() {
     const add_to_cart = document.querySelectorAll(".add_to_cart");
 
     add_to_cart.forEach(button => {

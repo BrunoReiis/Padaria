@@ -44,16 +44,11 @@
       align-items: center;
       transition: all 0.3s ease;
 
-      i {
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
+      .add_to_cart_span {
       }
     }
-    .add_to_cart:hover {
+    .add_to_cart.checked {
       background-color: var(--Text);
-      i {
-        color: #faf9f6;
-      }
     }
   }
 

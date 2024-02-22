@@ -1,7 +1,7 @@
 import Home_ProductRow from "../components/Products/ProductRow";
 import Home_SideBar from "../components/Products/SideBar";
 import { useEffect } from "react";
-import AddToCart from "../scripts/AddToCart";
+import ProductsJS from "../scripts/ProductsJS";
 
 interface Category {
   [key: string]: string[][];
@@ -9,7 +9,7 @@ interface Category {
 
 function Products() {
   useEffect(() => {
-    AddToCart();
+    ProductsJS();
   }, []);
 
   const products: Category = {
