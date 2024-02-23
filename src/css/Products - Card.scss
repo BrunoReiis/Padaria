@@ -45,10 +45,31 @@
       transition: all 0.3s ease;
 
       .add_to_cart_span {
+        width: 1.5rem;
+        height: 3px;
+        background-color: var(--Text);
+        position: absolute;
+        border-radius: 2px;
+      }
+      .add_to_cart_span:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      .add_to_cart_span:nth-child(2) {
+        transform: rotate(-45deg);
       }
     }
     .add_to_cart.checked {
       background-color: var(--Text);
+      .add_to_cart_span:nth-child(1) {
+        width: 0.8rem;
+        background-color: #faf9f6;
+        transform: translate(-8px, 4px) rotate(45deg);
+      }
+      .add_to_cart_span:nth-child(2) {
+        width: 1.3rem;
+        background-color: #faf9f6;
+        transform: translate(3px, 2px) rotate(-45deg);
+      }
     }
   }
 

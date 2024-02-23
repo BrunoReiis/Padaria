@@ -1,3 +1,19 @@
+.cart_icon {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  .cart_notification {
+    display: block;
+    text-decoration: none;
+  }
+}
+.cart_icon.cart_icon_navbar {
+  display: none;
+}
+
 header {
   width: 100%;
   position: sticky;
@@ -12,6 +28,7 @@ header {
     padding: 0.625rem;
     background-color: var(--base1);
     justify-content: space-between;
+    align-items: center;
 
     #header_profile_picture {
       margin-left: 50px;
@@ -34,6 +51,9 @@ header {
         text-shadow: none;
       }
     }
+    #navbar_options_responsive {
+      display: none;
+    }
   }
   .header_user_menu {
     display: flex;
@@ -52,7 +72,7 @@ header {
       font-size: 1.5rem;
       color: var(--Text);
     }
-    a > span {
+    a > .hover_span {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -65,7 +85,7 @@ header {
     }
     a:hover {
       cursor: pointer;
-      span {
+      .hover_span {
         left: 0;
         width: 100%;
       }
@@ -88,6 +108,30 @@ header {
 }
 
 @media (max-width: 1186px) {
+  .cart_icon.cart_icon_navbar {
+    display: flex;
+    position: relative;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-decoration: none;
+    padding: 10px 12px;
+    font-size: 1.5rem;
+    color: var(--Text);
+    // transition: all 0.3s ease;
+  }
+  .cart_icon.active {
+    display: none;
+  }
+  .cart_icon.cart_icon_navbar.active {
+    display: flex !important;
+  }
+
+  #navbar_options_responsive {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
   #header_profile_picture {
     margin: 0 20px !important;
     transition: none !important;
@@ -136,7 +180,7 @@ header {
     display: block !important;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     height: -moz-fit-content;
     height: fit-content;
     margin-right: 5%;

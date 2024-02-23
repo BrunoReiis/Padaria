@@ -13,27 +13,32 @@ export default function NavBar() {
         <ul className="header_user_menu">
           <a href="/products">
             Produtos
-            <span />
+            <span className="hover_span" />
           </a>
           <a href="/contact">
             Contato
-            <span />
+            <span className="hover_span" />
           </a>
           <a href="/about">
             Sobre
-            <span />
+            <span className="hover_span" />
           </a>
-          <a href="/cart">
+          <a className="cart_icon" href="/cart">
             <i className="fa-solid fa-basket-shopping"></i>
           </a>
           <a href="/user">
             <i className="fa-solid fa-user-large"></i>
           </a>
         </ul>
-        <div className="header_hamburger">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+        <div id="navbar_options_responsive">
+          <a className="cart_icon cart_icon_navbar" href="/cart">
+            <i className="fa-solid fa-basket-shopping"></i>
+          </a>
+          <div className="header_hamburger">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
         </div>
       </nav>
     </header>

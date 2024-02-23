@@ -11,7 +11,6 @@ const Home_Card = ({ img, title, info, price }: Props) => {
       <div className="image_content">
         <img src={img} />
         <button className="add_to_cart">
-          {/* <i className="fa-solid fa-plus"></i> */}
           <span className="add_to_cart_span"></span>
           <span className="add_to_cart_span"></span>
         </button>

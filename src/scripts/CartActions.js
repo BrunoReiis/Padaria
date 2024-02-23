@@ -26,7 +26,7 @@ export default function CartActions() {
 
             if (quantity <= 0) {
                 sessionStorage.removeItem(key)
-                alert(`O item ${key} foi removido da sua sacola de compras.`)
+                // alert(`O item ${key} foi removido da sua sacola de compras.`)
             } else {
                 const newValue = oldValue.split(",")
                 if (newValue.length === 5) {
