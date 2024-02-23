@@ -19,6 +19,9 @@ const Home_Main = () => {
         </div>
       </section>
       <section id="home_news">
+        <span className="scroll_me">
+          <i className="fa-solid fa-arrow-down"></i>
+        </span>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Exercitationem corporis quisquam assumenda nostrum tempora distinctio

@@ -89,12 +89,36 @@
     justify-content: center;
     align-items: center;
     padding: 5rem;
+
+    .scroll_me {
+      position: absolute;
+      top: -10%;
+      animation-name: scroll_me;
+      animation-duration: 1.2s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      i {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
 @keyframes parallax {
   to {
     transform: translate(0, calc(100svh - 10vh));
+  }
+}
+
+@keyframes scroll_me {
+  0% {
+    top: -10%;
+  }
+  50% {
+    top: -7.5%;
+  }
+  100% {
+    top: -10%;
   }
 }
 

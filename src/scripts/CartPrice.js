@@ -15,8 +15,8 @@ export default function CartPrice() {
     })
     const total_value = subtotal_value + service_tax_value + shipping_value
 
-    subtotal.innerHTML = `Subtotal: R$ ${subtotal_value.toFixed(2)}`
-    service_tax.innerHTML = `Taxa de serviço: R$ ${service_tax_value.toFixed(2)}`
-    shipping.innerHTML = `Frete: R$ ${shipping_value.toFixed(2)}`
+    subtotal.innerHTML = `Subtotal:<br /> <span class="cart_price">R$ ${subtotal_value.toFixed(2)}</span>`
+    service_tax.innerHTML = `Taxa de serviço:<br /> <span class="cart_price">R$ ${service_tax_value.toFixed(2)}</span>`
+    shipping.innerHTML = `Frete:<br /> <span class="cart_price">R$ ${shipping_value.toFixed(2)}</span>`
     total.innerHTML = `Total: R$ ${total_value.toFixed(2)}`
 }

@@ -19,10 +19,6 @@ export default function NavBar() {
             Contato
             <span className="hover_span" />
           </a>
-          <a href="/about">
-            Sobre
-            <span className="hover_span" />
-          </a>
           <a className="cart_icon" href="/cart">
             <i className="fa-solid fa-basket-shopping"></i>
           </a>
