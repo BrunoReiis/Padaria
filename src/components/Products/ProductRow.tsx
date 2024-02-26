@@ -6,29 +6,46 @@ interface Props {
 }
 
 const Home_ProductRow = ({ title, content }: Props) => {
+  function addsTitle(title: string) {
+    return (
+      <>
+        <span id={title} />
+        <h1>{title}</h1>
+      </>
+    );
+  }
+
+  function addsContent(content: any, index: number) {
+    return (
+      <>
+        {content.length === 5 ? (
+          <Card
+            key={index}
+            price={content[0]}
+            img={content[1]}
+            title={content[2]}
+            info={content[3]}
+          />
+        ) : (
+          <Card
+            key={index}
+            price={content[0]}
+            img={content[1]}
+            title={content[2]}
+          />
+        )}
+      </>
+    );
+  }
+
   return (
     <>
       <div className="product_row">
-        <span id={title} />
-        <h1>{title}</h1>
+        {addsTitle(title)}
         <div className="product_row_products">
-          {content.map((key, index) => {
-            if (key.length === 4) {
-              return (
-                <Card
-                  key={index}
-                  price={key[0]}
-                  img={key[1]}
-                  title={key[2]}
-                  info={key[3]}
-                />
-              );
-            } else {
-              return (
-                <Card price={key[0]} key={index} img={key[1]} title={key[2]} />
-              );
-            }
-          })}
+          {Object.keys(content).map((key: any, index) =>
+            addsContent(content[key], index)
+          )}
         </div>
       </div>
     </>

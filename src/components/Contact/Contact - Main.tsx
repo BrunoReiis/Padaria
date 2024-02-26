@@ -19,7 +19,7 @@ const Contact_a = () => {
             Instagram<span></span>
           </div>
           <div className="contact_social_item">
-            <img src="/ifood.svg" />
+            <img src="/img/ifood.svg" />
             IFood<span></span>
           </div>
         </div>
@@ -29,4 +29,3 @@ const Contact_a = () => {
 };
 
 export default Contact_a;
-// golpe duplo
