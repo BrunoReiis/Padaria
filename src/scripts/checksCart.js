@@ -2,7 +2,6 @@ export function checksCart() {
     if (sessionStorage.length > 0) {
         const icons = document.querySelectorAll(".cart_icon")
         icons.forEach(icon => {
-            console.log(icon.querySelector("p"));
             if (icon.querySelector("p")) {
                 icon.querySelector("p").textContent = sessionStorage.length
                 console.log("atualizado");

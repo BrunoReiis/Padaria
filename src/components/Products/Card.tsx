@@ -1,11 +1,12 @@
 interface Props {
+  id: number;
   img: string;
   title: string;
   info?: string;
   price: string;
 }
 
-const Home_Card = ({ img, title, info, price }: Props) => {
+const Card = ({ id, img, title, info, price }: Props) => {
   return (
     <div className="card">
       <div className="image_content">
@@ -17,12 +18,14 @@ const Home_Card = ({ img, title, info, price }: Props) => {
       </div>
       {info ? (
         <div className="card_content">
+          <p className="product_id">{id}</p>
           <p className="product_price">{price}</p>
           <h1 className="product_name">{title}</h1>
           <p className="product_info">{info}</p>
         </div>
       ) : (
-        <div className="card_content_no_info">
+        <div className="card_content">
+          <p className="product_id">{id}</p>
           <p className="product_price">{price}</p>
           <h1 className="product_name">{title}</h1>
         </div>
@@ -31,4 +34,4 @@ const Home_Card = ({ img, title, info, price }: Props) => {
   );
 };
 
-export default Home_Card;
+export default Card;

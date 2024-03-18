@@ -19,13 +19,30 @@ export default function ProductsJS() {
         let parentElement = e.currentTarget.parentNode.parentNode
         let img = e.currentTarget.parentNode.querySelector("img").src.split("/img")[1]
         let itemPrice = parentElement.querySelector(".product_price").textContent.replace(",", ".")
-        let itemName = parentElement.querySelector(".product_name").textContent
+        let itemTitle = parentElement.querySelector(".product_name").textContent
+        let itemID = parentElement.querySelector(".product_id").textContent
 
         try {
             let itemInfo = parentElement.querySelector(".product_info").textContent
-            sessionStorage.setItem(itemName, [itemPrice, `/img${img}`, itemName, itemInfo, 1])
+            let json = {
+                price: itemPrice,
+                image: `/img${img}`,
+                title: itemTitle,
+                info: itemInfo,
+                quantity: 1,
+                id: itemID
+            }
+
+            sessionStorage.setItem(itemID, JSON.stringify(json))
         } catch (e) {
-            sessionStorage.setItem(itemName, [itemPrice, `/img${img}`, itemName, 1])
+            let json = {
+                price: itemPrice,
+                image: `/img${img}`,
+                title: itemTitle,
+                quantity: 1,
+                id: itemID
+            }
+            sessionStorage.setItem(itemID, JSON.stringify(json))
         }
     }
 

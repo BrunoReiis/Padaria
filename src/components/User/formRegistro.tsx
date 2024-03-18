@@ -15,8 +15,8 @@ const FormRegistro = () => {
     }
 
     if (!passVerification(pass)) {
-        setMessage("Senha tem que ser maior que 8 caracteres!");
-        return;
+      setMessage("Senha tem que ser maior que 8 caracteres!");
+      return;
     }
 
     try {
@@ -32,12 +32,12 @@ const FormRegistro = () => {
     return emailRegex.test(email);
   };
 
-  const passVerification = (pass: string) =>{
-    if (pass.length < 8){
-        return false;
+  const passVerification = (pass: string) => {
+    if (pass.length < 8) {
+      return false;
     }
     return true;
-  }
+  };
 
   return (
     <div className="main">

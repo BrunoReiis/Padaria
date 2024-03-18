@@ -1,41 +1,26 @@
 export default function CartActions() {
-    function editsSessionStorage(key, value) {
+    function editsSessionStorage(key, value, quantityElement) {
         const oldValue = sessionStorage.getItem(key)
+        const parsed = JSON.parse(oldValue)
 
         if (value === "add") {
-            const newValue = oldValue.split(",")
-            let quantity
-            if (newValue.length === 5) {
-                quantity = parseInt(newValue[4]) + 1
-                newValue[4] = quantity
-            } else if (newValue.length === 4) {
-                quantity = parseInt(newValue[3]) + 1
-                newValue[3] = quantity
-            }
+            parsed.quantity++
+            const stringified = JSON.stringify(parsed)
             sessionStorage.removeItem(key)
-            sessionStorage.setItem(key, newValue)
+            sessionStorage.setItem(key, stringified)
+
+            quantityElement.textContent++
 
         } else if (value === "remove") {
-            const newValue = oldValue.split(",")
-            let quantity
-            if (newValue.length === 5) {
-                quantity = parseInt(newValue[4]) - 1
-            } else if (newValue.length === 4) {
-                quantity = parseInt(newValue[3]) - 1
-            }
-
-            if (quantity <= 0) {
+            parsed.quantity--
+            if (parsed.quantity <= 0) {
                 sessionStorage.removeItem(key)
-                // alert(`O item ${key} foi removido da sua sacola de compras.`)
             } else {
-                const newValue = oldValue.split(",")
-                if (newValue.length === 5) {
-                    newValue[4] = quantity
-                } else if (newValue.length === 4) {
-                    newValue[3] = quantity
-                }
+                const stringified = JSON.stringify(parsed)
                 sessionStorage.removeItem(key)
-                sessionStorage.setItem(key, newValue)
+                sessionStorage.setItem(key, stringified)
+
+                quantityElement.textContent--
             }
         }
     }
@@ -46,19 +31,19 @@ export default function CartActions() {
     btnAdd.forEach((btn) => {
         btn.addEventListener("click", (e) => {
             const parent = e.target.parentElement
-            const key = parent.parentElement.querySelector(".card_title").textContent
-            editsSessionStorage(key, "add")
+            const key = parent.parentElement.querySelector(".card_id").textContent
+            const quantityElement = parent.querySelector(".cart_card_quantity")
+            editsSessionStorage(key, "add", quantityElement)
             location.reload()
         })
     })
     btnRemove.forEach((btn) => {
         btn.addEventListener("click", (e) => {
             const parent = e.target.parentElement
-            const key = parent.parentElement.querySelector(".card_title").textContent
-            parent.querySelector(".cart_card_quantity").textContent--;
-            editsSessionStorage(key, "remove")
+            const key = parent.parentElement.querySelector(".card_id").textContent
+            const quantityElement = parent.querySelector(".cart_card_quantity")
+            editsSessionStorage(key, "remove", quantityElement)
             location.reload()
         })
     })
 }
-
