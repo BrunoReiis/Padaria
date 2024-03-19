@@ -3,8 +3,14 @@ import Home_SideBar from "../components/Products/SideBar";
 import { useEffect } from "react";
 import ProductsJS from "../scripts/ProductsJS";
 
-interface Category {
-  [key: string]: string[][];
+interface TestType {
+  [key: string]: {
+    id: number;
+    price: string;
+    image: string;
+    title: string;
+    description?: string;
+  }[];
 }
 
 function Products() {
@@ -12,49 +18,90 @@ function Products() {
     ProductsJS();
   }, []);
 
-  const products: Category = {
-    Categoria_01: [
-      ["R$ 11,60", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 9,60", "/img/mockup.png", "Item Title"],
-      ["R$ 12,90", "/img/mockup.png", "Item Title"],
+  const test: TestType = {
+    "Test Row 1": [
+      {
+        id: 1,
+        price: "R$ 11,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+        description: "Description",
+      },
+      {
+        id: 2,
+        price: "R$ 9,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+      },
+      {
+        id: 3,
+        price: "R$ 9,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+      },
     ],
-    Categoria_02: [
-      ["R$ 22,50", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 8,90", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 16,90", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 6,00", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 6,00", "/img/mockup.png", "Item Title", "Description"],
+    "Test Row 2": [
+      {
+        id: 1,
+        price: "R$ 11,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+        description: "Description",
+      },
+      {
+        id: 2,
+        price: "R$ 9,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+        description: "Description",
+      },
+      {
+        id: 3,
+        price: "R$ 9,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+        description: "Description",
+      },
+      {
+        id: 4,
+        price: "R$ 9,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+        description: "Description",
+      },
+      {
+        id: 5,
+        price: "R$ 9,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+        description: "Description",
+      },
     ],
-    Categoria_03: [
-      ["R$ 22,90", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 7,95", "/img/mockup.png", "Item Title"],
-      ["R$ 12,90", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 18,90", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 5,45", "/img/mockup.png", "Item Title"],
-      ["R$ 21,90", "/img/mockup.png", "Item Title"],
-      ["R$ 32,80", "/img/mockup.png", "Item Title", "Description"],
-    ],
-    Categoria_04: [
-      ["R$ 36,90", "/img/mockup.png", "Item Title"],
-      ["R$ 36,90", "/img/mockup.png", "Item Title"],
-      ["R$ 44,90", "/img/mockup.png", "Item Title"],
-      ["R$ 36,90", "/img/mockup.png", "Item Title"],
-    ],
-    Categoria_05: [
-      ["R$ 29,90", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 25,90", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 29,90", "/img/mockup.png", "Item Title", "Description"],
-      ["R$ 29,90", "/img/mockup.png", "Item Title", "Description"],
+    "Test Row 3": [
+      {
+        id: 1,
+        price: "R$ 11,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+        description: "Description",
+      },
+      {
+        id: 2,
+        price: "R$ 9,60",
+        image: "/img/mockup.png",
+        title: "Item Title",
+        description: "Description",
+      },
     ],
   };
 
   return (
     <>
       <div id="page_content">
-        <Home_SideBar titles={Object.keys(products)} />
+        <Home_SideBar titles={Object.keys(test)} />
         <div id="products">
-          {Object.keys(products).map((key: any, index) => (
-            <Home_ProductRow key={index} title={key} content={products[key]} />
+          {Object.keys(test).map((key: any, index) => (
+            <Home_ProductRow key={index} title={key} content={test[key]} />
           ))}
         </div>
       </div>

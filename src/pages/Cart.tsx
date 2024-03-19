@@ -8,13 +8,13 @@ function Cart() {
     CartActions();
     CartPrice();
   }, []);
-  let products: string[][] = [];
-  Object.keys(sessionStorage).forEach((productKey) => {
-    const product = sessionStorage.getItem(productKey)?.split(",");
-    if (product) {
-      products.push(product);
-    }
+  let products: any[] = [];
+
+  Object.keys(sessionStorage).forEach((key) => {
+    const product = sessionStorage.getItem(key);
+    product ? products.push(JSON.parse(product)) : null;
   });
+
   return (
     <>
       <div id="page_content">

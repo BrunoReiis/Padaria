@@ -1,12 +1,13 @@
 interface Props {
-  img: string;
+  img: any;
   title: string;
   description?: string;
   price: string;
   quantity: string;
+  id: string;
 }
 
-const Cart_Card = ({ img, title, description, price, quantity }: Props) => {
+const Cart_Card = ({ img, title, description, price, quantity, id }: Props) => {
   return (
     <div className="cart_card">
       <img src={img} />
@@ -16,11 +17,13 @@ const Cart_Card = ({ img, title, description, price, quantity }: Props) => {
 
         {description ? (
           <div className="container">
+            <p className="card_id">{id}</p>
             <p className="card_description">{description}</p>
             <p className="card_price">{price}</p>
           </div>
         ) : (
           <div className="container">
+            <p className="card_id">{id}</p>
             <p className="card_price">{price}</p>
           </div>
         )}

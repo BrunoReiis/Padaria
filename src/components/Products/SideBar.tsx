@@ -16,7 +16,7 @@ const Home_SideBar = ({ titles }: Props) => {
           {titlesArray.map((title, index) => {
             return (
               <li key={index} className="sidebar_list_element">
-                <a href={"#" + title}>
+                <a href={`#${title.split(" ").join("_")}`}>
                   {title}
                   <span />
                 </a>

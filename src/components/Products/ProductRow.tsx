@@ -2,36 +2,36 @@ import Card from "./Card";
 
 interface Props {
   title: string;
-  content: string[][];
+  content: Object;
 }
 
 const Home_ProductRow = ({ title, content }: Props) => {
   function addsTitle(title: string) {
     return (
       <>
-        <span id={title} />
+        <span id={title.split(" ").join("_")} />
         <h1>{title}</h1>
       </>
     );
   }
 
-  function addsContent(content: any, index: number) {
+  function AddsContent({ content }: { content: any }) {
     return (
       <>
-        {content.length === 5 ? (
+        {Object.keys(content).length === 5 ? (
           <Card
-            key={index}
-            price={content[0]}
-            img={content[1]}
-            title={content[2]}
-            info={content[3]}
+            id={content.id}
+            price={content.price}
+            img={content.image}
+            title={content.title}
+            info={content.description}
           />
         ) : (
           <Card
-            key={index}
-            price={content[0]}
-            img={content[1]}
-            title={content[2]}
+            id={content.id}
+            price={content.price}
+            img={content.image}
+            title={content.title}
           />
         )}
       </>
@@ -43,9 +43,9 @@ const Home_ProductRow = ({ title, content }: Props) => {
       <div className="product_row">
         {addsTitle(title)}
         <div className="product_row_products">
-          {Object.keys(content).map((key: any, index) =>
-            addsContent(content[key], index)
-          )}
+          {Object.values(content).map((value: any, index) => (
+            <AddsContent key={index} content={value} />
+          ))}
         </div>
       </div>
     </>
